@@ -1,11 +1,11 @@
 fun main() {
     var masterCard = "MasterCard"
-    var maestro = "maestro"
-    var visa = "visa"
+    var maestro = "Maestro"
+    var visa = "Visa"
     var vKPay = "VkPay"
     var world = "Мир"
-    val sum = 130_000.0
-    println(sum)
+    val sum = 7_000.0
+    println(comissionCalculater(visa, sum))
 
 }
 

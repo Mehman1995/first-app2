@@ -1,9 +1,9 @@
 fun main() {
-    var masterCard = "MasterCard"
-    var maestro = "Maestro"
-    var visa = "Visa"
-    var vKPay = "VkPay"
-    var world = "Мир"
+    val masterCard = "MasterCard"
+    val maestro = "Maestro"
+    val visa = "Visa"
+    val vKPay = "VkPay"
+    val world = "Мир"
     val sum = 7_000.0
     println(comissionCalculater(visa, sum))
 
@@ -13,7 +13,7 @@ fun comissionCalculater(card: String = "VK Pay", sum: Double = 0.0): String {
     return when (card) {
         "MasterCart", "Maestro" ->
             if (sum < 50 || sum > 150_000) "Ошибка перевода средств"
-            else if (sum >= 300 && sum <= 75000) "Осуществлен перевод на сумму $sum"
+            else if (sum in 300.0..75000.0) "Осуществлен перевод на сумму $sum"
             else "Осуществлен перевод на сумму ${masterCardCommission(sum)}"
         "Visa", "Мир" ->
             if (sum < 50 || sum > 150_000) "Ошибка перевода средств"
